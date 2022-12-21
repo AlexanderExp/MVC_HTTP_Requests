@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Peer7</name>
+    </assembly>
+    <members>
+        <member name="T:Peer7.Controllers.MessageController">
+            <summary>
+            Class for MessageController.
+            </summary>
+        </member>
+        <member name="F:Peer7.Controllers.MessageController.messages">
+            <summary>
+            The list of all messages.
+            </summary>
+        </member>
+        <member name="M:Peer7.Controllers.MessageController.GetMessagesSenderReceiver(System.Int32,System.Int32)">
+            <summary>
+            Gets messages that were send by User with {senderId} and received by User with {receiverId}.
+            </summary>
+            <param name="senderId"> The Id of the sender. </param>
+            <param name="receiverId"> The Id of the receiver. </param>
+            <returns> Result of an operation. </returns>
+        </member>
+        <member name="M:Peer7.Controllers.MessageController.GetMessagesSender(System.Int32)">
+            <summary>
+            Gets messages that were send by User with {senderId}.
+            </summary>
+            <param name="senderId"> The Id of the sender. </param>
+            <returns> Result of an operation. </returns>
+        </member>
+        <member name="M:Peer7.Controllers.MessageController.GetMessagesReceiver(System.Int32)">
+            <summary>
+            Gets messages that were receiver by User with {receiverId}.
+            </summary>
+            <param name="receiverId"> The Id of the receiver. </param>
+            <returns> Result of an operation. </returns>
+        </member>
+        <member name="M:Peer7.Controllers.MessageController.CreateNewMessage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Adds new Message to the List of Messages.
+            </summary>
+            <param name="receiverId"> The Id of the receiver. </param>
+            <param name="senderId"> The Id of the sender. </param>
+            <param name="Subject"> Subject of the Message. </param>
+            <param name="Message"> The Message. </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peer7.Controllers.MessageController.GetAllMessages">
+            <summary>
+            To make testing the program a bit easier.
+            </summary>
+            <returns> Result of an operation. </returns>
+        </member>
+        <member name="T:Peer7.Controllers.UserController">
+            <summary>
+            Class of UserController.
+            </summary>
+        </member>
+        <member name="F:Peer7.Controllers.UserController.users">
+            <summary>
+            The List of all users.
+            </summary>
+        </member>
+        <member name="M:Peer7.Controllers.UserController.CreateUsers">
+            <summary>
+            The POST method.
+            </summary>
+            <returns> Result of an operation. </returns>
+        </member>
+        <member name="M:Peer7.Controllers.UserController.HandleMessagesForPost">
+            <summary>
+            Handles the Serialization of Messages file.
+            </summary>
+        </member>
+        <member name="M:Peer7.Controllers.UserController.HandleUsersForPost">
+            <summary>
+            Handles the Serialization of Users file.
+            </summary>
+        </member>
+        <member name="M:Peer7.Controllers.UserController.GetUserById(System.String)">
+            <summary>
+            The GET method (Gets single user by his Id).
+            </summary>
+            <returns> Result of an operation. </returns>
+        </member>
+        <member name="M:Peer7.Controllers.UserController.GetAllUsers">
+            <summary>
+            The Get method (Gets the List of all Users).
+            </summary>
+            <returns> Result of an operation. </returns>
+        </member>
+        <member name="T:Peer7.Models.MessageInfo">
+            <summary>
+            Class for Messages.
+            </summary>
+        </member>
+        <member name="P:Peer7.Models.MessageInfo.Subject">
+            <summary>
+            The subject of the message.
+            </summary>
+        </member>
+        <member name="P:Peer7.Models.MessageInfo.Message">
+            <summary>
+            The message itself.
+            </summary>
+        </member>
+        <member name="P:Peer7.Models.MessageInfo.SenderId">
+            <summary>
+            Id of the sender.
+            </summary>
+        </member>
+        <member name="P:Peer7.Models.MessageInfo.ReceiverId">
+            <summary>
+            Id of the Receiver.
+            </summary>
+        </member>
+        <member name="T:Peer7.Models.UserInfo">
+            <summary>
+            Class for Users.
+            </summary>
+        </member>
+        <member name="P:Peer7.Models.UserInfo.Email">
+            <summary>
+            Email of the User.
+            </summary>
+        </member>
+        <member name="P:Peer7.Models.UserInfo.UserName">
+            <summary>
+            Name of the User.
+            </summary>
+        </member>
+        <member name="T:Peer7.Program">
+            <summary>
+            Program class.
+            </summary>
+        </member>
+        <member name="M:Peer7.Program.Main(System.String[])">
+            <summary>
+            The Main method.
+            </summary>
+            <param name="args"> Unnesessary arguments. </param>
+        </member>
+        <member name="M:Peer7.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Method for building the Host Page.
+            </summary>
+            <param name="args"> Parametrs. </param>
+            <returns> IHostBuilder. </returns>
+        </member>
+        <member name="T:Peer7.RandomGenerator">
+            <summary>
+            Class for random generators.
+            </summary>
+        </member>
+        <member name="M:Peer7.RandomGenerator.CreateRandomNameOrSubject">
+            <summary>
+            Creates random string for Name or Subject.
+            </summary>
+            <returns> Single String. </returns>
+        </member>
+        <member name="M:Peer7.RandomGenerator.CreateRandomMessage">
+            <summary>
+            Creates a message in Message object.
+            </summary>
+            <returns> Single String. </returns>
+        </member>
+        <member name="M:Peer7.RandomGenerator.CreateRandomEmail">
+            <summary>
+            Creates a random Email.
+            </summary>
+            <returns> Single string. </returns>
+        </member>
+        <member name="M:Peer7.RandomGenerator.CreateMessagesList(System.Collections.Generic.List{Peer7.Models.UserInfo})">
+            <summary>
+            Creates a List of random Messages.
+            </summary>
+            <param name="users"> The List of Users. </param>
+            <returns> List of Messages. </returns>
+        </member>
+        <member name="M:Peer7.RandomGenerator.CreateUsersList">
+            <summary>
+            Creates a List of random Users.
+            </summary>
+            <returns> List of Usrers. </returns>
+        </member>
+        <member name="T:Peer7.Startup">
+            <summary>
+            Startup Class.
+            </summary>
+        </member>
+        <member name="M:Peer7.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Startup Constructor.
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Peer7.Startup.Configuration">
+            <summary>
+            Configuration.
+            </summary>
+        </member>
+        <member name="M:Peer7.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"> Services. </param>
+        </member>
+        <member name="M:Peer7.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"> Current Application. </param>
+            <param name="env"> Current Environment. </param>
+        </member>
+    </members>
+</doc>
